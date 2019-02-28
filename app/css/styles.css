@@ -137,17 +137,17 @@ header ul {
     text-align: center;
     opacity: 0;
     transition: all 200ms ease-in-out 200ms;
-    font-size: 1.5rem;
-}
+    font-size: 1.5rem;}
 
 header .nav-toggle:checked ~ nav ul {
     opacity: 1;
 }
 
-header li {
+header nav ul li {
     text-transform: uppercase;
     margin: 2rem 0;
     cursor: pointer;
+    font-size: 1.5rem !important;
 }
 
 
