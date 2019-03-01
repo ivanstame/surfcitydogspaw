@@ -152,7 +152,7 @@ header nav ul li {
 
 
 .services .services-title {
-    font-size: 2rem;
+    font-size: 5rem;
     letter-spacing: 8px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
     margin-bottom: 5rem;
@@ -247,8 +247,8 @@ header nav ul li {
     border: 7px solid #f9f8f7;
     border-radius: 50%;
     box-shadow: 0 0 5px 5px rgba(50,50,50,.15);
-    width: 100px;
-    height: 100px;
+    width: 10rem;
+    height: 10rem;
     -webkit-shape-outside:circle();
     shape-outside: circle();
     shape-margin: 0;
