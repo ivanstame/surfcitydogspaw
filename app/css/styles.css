@@ -58,7 +58,7 @@ header .nav-toggle-label {
 header .nav-toggle-label img {
     transition: all 300ms ease-in-out;
     transform: rotate(45deg);
-    width: 5rem;
+    width: 15%;
 }
 
 header .nav-toggle-label.shift img {
@@ -97,7 +97,7 @@ header nav ul li {
     margin: 2rem 0;
     cursor: pointer;
     color: red;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 
@@ -247,8 +247,8 @@ header nav ul li {
     border: 7px solid #f9f8f7;
     border-radius: 50%;
     box-shadow: 0 0 5px 5px rgba(50,50,50,.15);
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     -webkit-shape-outside:circle();
     shape-outside: circle();
     shape-margin: 0;
@@ -303,7 +303,7 @@ header nav ul li {
 }
 
 .gallery .gallery-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     letter-spacing: 4px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     margin-bottom: 5rem;
