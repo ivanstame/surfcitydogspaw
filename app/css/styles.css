@@ -174,7 +174,7 @@ header nav ul li {
     grid-template-columns: 1fr 4fr;
     grid-template-rows: auto;
     margin-bottom: 4rem;
-    grid-gap: 2rem;
+    grid-gap: 3rem;
 }
 
 .services ul li .icon-wrapper {
@@ -371,7 +371,7 @@ header nav ul li {
 }
 
 .darken {
-   filter: blur(3px);
+   filter: blur(5px);
   }
 
 .noScroll {
@@ -416,7 +416,7 @@ footer .footer-info-wrapper {
 }
 
 footer .footer-info-wrapper .add-phone-hours {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: #F3DA02;
