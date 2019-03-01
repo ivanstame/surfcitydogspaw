@@ -4,6 +4,7 @@
     --main-accent: #5E8EAF;
     --secondary-accent: #F3DA02;
     --body-color: #F9F8F7;
+      font-size: calc(1vw + 0.6rem);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -307,7 +308,7 @@ header nav ul li {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     margin-bottom: 5rem;
     color: #5E8EAF;
-
+    margin-bottom: 2rem;
 }
 
 .gallery .gallery-title h1 {
