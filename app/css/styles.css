@@ -379,6 +379,83 @@ header nav ul li {
 
 footer {
     grid-row: 7;
-    height: 40vh;
-    background: var(--main-accent);
+    background-image: url('../images/pawbgblue2.svg');
+    background-size: contain;
+    padding: 10% 5%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 1.5;
 }
+
+footer p {
+    display: flex;
+    align-items: center;
+}
+
+footer .footer-title {
+    font-size: 5rem;
+    letter-spacing: 8px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    margin-bottom: 3rem;
+    color: #F3DA02;
+    font-weight: 600;
+
+}
+
+footer .footer-info-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 2rem;
+}
+
+footer .footer-info-wrapper .add-phone-hours {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #F3DA02;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+}
+
+footer .footer-info-wrapper h3:first-child {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+footer .footer-info-wrapper h3:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+footer .footer-info-wrapper h3:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+footer .footer-info-wrapper p:first-child {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+footer .footer-info-wrapper p:nth-child(2) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+footer .footer-info-wrapper .hours-box {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+footer .footer-info-wrapper .hours-box ul {
+    display: inline-block;
+
+}
+
+footer .footer-info-wrapper .hours-box ul:first-child {
+    margin-right: 1.5rem;
+}
+
