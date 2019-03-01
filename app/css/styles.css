@@ -63,7 +63,7 @@ header .nav-toggle-label {
 header .nav-toggle-label img {
     transition: all 300ms ease-in-out;
     transform: rotate(45deg);
-    width: 15%;
+    width: 10%;
 }
 
 header .nav-toggle-label.shift img {
@@ -159,7 +159,7 @@ header nav ul li {
     font-size: 5rem;
     letter-spacing: 8px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-    margin-bottom: 8rem;
+    margin-bottom: 3rem;
     color: #F3DA02;
 }
 
@@ -201,8 +201,8 @@ header nav ul li {
 
 .services ul li .service-wrapper p {
     line-height: 1.5;
-    font-weight: 300;
-    font-size: 0.9rem;
+    font-weight: 600;
+    
 }
 /*  Testimonials Styles */
 
@@ -214,7 +214,7 @@ header nav ul li {
 
 .testimonials h1 {
     text-align: center;
-    font-size: 5rem;
+    font-size: 3rem;
     letter-spacing: 4px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     margin-bottom: 5rem;
@@ -251,8 +251,8 @@ header nav ul li {
     border: 7px solid #f9f8f7;
     border-radius: 50%;
     box-shadow: 0 0 5px 5px rgba(50,50,50,.15);
-    width: 5rem;
-    height: 5rem;
+    width: 2rem;
+    height: 2rem;
     -webkit-shape-outside:circle();
     shape-outside: circle();
     shape-margin: 0;
