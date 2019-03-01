@@ -15,6 +15,10 @@ p, li {
     font-family: var(--copy-font);
 }
 
+p {
+    font-size: 1rem !important;
+}
+
 /* Grid Setup */
 
 .bodyframe {
