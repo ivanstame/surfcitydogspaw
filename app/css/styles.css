@@ -79,13 +79,14 @@ header nav {
     transform-origin: top;
     text-align: left;
     transition: all 200ms ease-in-out;
+        font-size: 1.5rem;
 }
 
 header ul {
     text-align: center;
     opacity: 0;
     transition: all 200ms ease-in-out 200ms;
-    font-size: 1.5rem;
+
 }
 
 header .nav-toggle:checked ~ nav ul {
@@ -96,7 +97,6 @@ header nav ul li {
     text-transform: uppercase;
     margin: 2rem 0;
     cursor: pointer;
-    color: red;
 }
 
 
@@ -311,7 +311,7 @@ header nav ul li {
 }
 
 .gallery .gallery-title h1 {
-   color: green;
+   font-size: 3rem;
 }
 
 .images-container {
