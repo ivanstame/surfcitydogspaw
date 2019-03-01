@@ -80,7 +80,6 @@ header nav {
     transform-origin: top;
     text-align: left;
     transition: all 200ms ease-in-out;
-        font-size: 1.5rem;
 }
 
 header ul {
@@ -98,7 +97,7 @@ header nav ul li {
     text-transform: uppercase;
     margin: 2rem 0;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 
@@ -156,7 +155,7 @@ header nav ul li {
     font-size: 5rem;
     letter-spacing: 8px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-    margin-bottom: 5rem;
+    margin-bottom: 8rem;
     color: #F3DA02;
 }
 
