@@ -251,8 +251,8 @@ header nav ul li {
     border: 7px solid #f9f8f7;
     border-radius: 50%;
     box-shadow: 0 0 5px 5px rgba(50,50,50,.15);
-    width: 4rem;
-    height: 4rem;
+    width: 6rem;
+    height: 6rem;
     -webkit-shape-outside:circle();
     shape-outside: circle();
     shape-margin: 0;
@@ -395,6 +395,7 @@ footer {
 footer p {
     display: flex;
     align-items: center;
+    font-weight: 600;
 }
 
 footer .footer-title {
@@ -461,4 +462,8 @@ footer .footer-info-wrapper .hours-box ul {
 footer .footer-info-wrapper .hours-box ul:first-child {
     margin-right: 1.5rem;
 }
+
+.info {
+    font-weight: 600;
+    }
 
