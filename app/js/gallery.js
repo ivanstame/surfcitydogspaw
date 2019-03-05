@@ -57,3 +57,12 @@ document.body.addEventListener('touchcancel',function(){
   active = false;
   document.querySelector('.scroller').classList.remove('scrolling');
 });
+document.body.addEventListener('touchmove',function(e){
+  if (!active) return;
+  // This gives current mouse position, but it breaks since there's no mouse involved for touch.  You have to set it to something.  And boom there it is
+  let x = e.touches[0].pageX​;
+  // but we want it relative to our wrapper
+  x -= document.querySelector('.wrapper').getBoundingClientRect().left;
+  // Okay let's change our state
+  scrollIt(x);
+});
