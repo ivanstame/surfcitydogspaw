@@ -214,8 +214,8 @@ header nav ul li {
 
 .testimonials h1 {
     text-align: center;
-    font-size: 4rem;
-    letter-spacing: 4px;
+    font-size: 3rem;
+    letter-spacing: 1px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     margin-bottom: 5rem;
     color: #5E8EAF;
@@ -304,78 +304,112 @@ header nav ul li {
     justify-content: space-around;
     padding: 0 10%;
     margin-bottom: 5rem;
+    overflow-x: hidden;
 }
 
-.gallery .gallery-title {
-    letter-spacing: 4px;
+.gallery h1 {
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 1px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     margin-bottom: 5rem;
     color: #5E8EAF;
-
-}
-
-.gallery .gallery-title h1 {
-   font-size: 4rem;
     margin-bottom: 2rem;
 }
 
-.images-container {
-  /*  Acts as a backdrop canvas  */
+/* Our wrapper */
+.wrapper{
+  width: calc(80vw);
+  height: calc(80vw);
+  position: relative;
+  float: left;
+  overflow:hidden;
+  margin-bottom: 1rem;
+}
+
+/* Our image information */
+.before,
+.after {
+  width:100%;
+  height:100%;
+  background-repeat:no-repeat;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-}
-
-.image-grid {
-  margin-top: -1rem;
-  width: 100%;
+  top:0;
+  left:0;
+  pointer-events:none;
   overflow: hidden;
-  z-index: 2;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto auto;
 }
 
-.gallery img {
-  width: 100%;
-  border: 1px solid #f2f2f2;
-  opacity: 0.9;
+.content-image{
+  height:100%;
 }
 
-.gallery img:hover {
-  opacity: 1;
+.after{
+  width:125px;
+}
+
+.scroller{
+  width: 50px;
+  height:50px;
+  position: absolute;
+  left:100px;
+  top:50%;
+  transform:translateY(-50%);
+  border-radius:50%;
+  background-color: transparent;
+  opacity:0.9;
+  pointer-events:auto;
   cursor: pointer;
 }
 
-.modal2build {
-  opacity: 0;
-  border: 1px solid #ccc;
-  width: calc(60vw);
-  height: calc(60vw);
-  background: pink;
-  position: fixed;
-  transform: translate(-50%, -50%) scale(0);
-  z-index: 3;
-
+.scroller:hover{
+  opacity:1;
 }
 
-.modal2appear {
-   transition: all 200ms ease-in-out;
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+.scrolling{
+  pointer-events:none;
+  opacity:1;
+  // z-index: 1;
 }
 
-.darken {
-   filter: blur(5px);
-  }
-
-.noScroll {
-    overflow-y: hidden;
+.scroller__thumb{
+  width:100%;
+  height:100%;
+  padding:5px;
 }
+
+.scroller:before,
+.scroller:after{
+  content:" ";
+  display: block;
+  width: 5px;
+  height: 9999px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3.5px;
+  z-index: 30;
+  transition:0.1s;
+}
+.scroller:before{
+  top:100%;
+}
+.scroller:after{
+  bottom:100%;
+}
+
+/* If you want to cahnge the colors, make sure you change the fill in the svgs to match */
+.scroller{
+  border: 5px solid #fff;
+}
+.scroller:before,
+.scroller:after{
+  background: #fff;
+}
+
+
 
 
 /* Footer Styles  */
