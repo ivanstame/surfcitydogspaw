@@ -99,9 +99,9 @@ header .nav-toggle:checked ~ nav ul {
 
 header nav ul li {
     text-transform: uppercase;
-    margin: 3rem 0;
+    margin: 2rem 0;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 
