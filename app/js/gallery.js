@@ -1,63 +1,59 @@
-// const html = document.documentElement;
-var html = document.getElementsByTagName("BODY")[0];
-const images_container = document.querySelector(".images-container");
-const image_grid = document.querySelector(".image-grid");
-const photos = document.querySelectorAll(".photo");
-var img_source;
-var modal;
+// I hope this over-commenting helps. Let's do this!
+// Let's use the 'active' variable to let us know when we're using it
+let active = false;
 
-//               FUNCTIONS LIST                        //
+// First we'll have to set up our event listeners
+// We want to watch for clicks on our scroller
+document.querySelector('.scroller').addEventListener('mousedown',function(){
+  active = true;
+  // Add our scrolling class so the scroller has full opacity while active
+  document.querySelector('.scroller').classList.add('scrolling');
+});
+// We also want to watch the body for changes to the state,
+// like moving around and releasing the click
+// so let's set up our event listeners
+document.body.addEventListener('mouseup',function(){
+  active = false;
+  document.querySelector('.scroller').classList.remove('scrolling');
+});
+document.body.addEventListener('mouseleave',function(){
+  active = false;
+  document.querySelector('.scroller').classList.remove('scrolling');
+});
 
-function closeModal() {
-  modal.classList.remove("appear");
-  image_grid.classList.toggle("darken");
+// Let's figure out where their mouse is at
+document.body.addEventListener('mousemove',function(e){
+  if (!active) return;
+  // Their mouse is here...
+  let x = e.pageX;
+  // but we want it relative to our wrapper
+  x -= document.querySelector('.wrapper').getBoundingClientRect().left;
+  // Okay let's change our state
+  scrollIt(x);
+});
+
+// Let's use this function
+function scrollIt(x){
+    let transform = Math.max(0,(Math.min(x,document.querySelector('.wrapper').offsetWidth)));
+    document.querySelector('.after').style.width = transform+"px";
+    document.querySelector('.scroller').style.left = transform-25+"px";
 }
 
-function grabsource() {
-  img_source = this.src;
-}
+// Let's set our opening state based off the width,
+// we want to show a bit of both images so the user can see what's going on
+scrollIt(100);
 
-//                EVENT LISTENERS                  //
-
-// images_container.addEventListener("click", closeModal);
-for (var j = 0; j < photos.length; j++) {
-  photos[j].addEventListener("click", grabsource);
-  photos[j].addEventListener("click", makeThatShitAppear);
-}
-
-function makeThatShitAppear() {
-  var vpHeight = window.innerHeight;
-  var vpWidth = window.innerWidth;
-  var nudgeLengthX = vpWidth / 2;
-  var nudgeLengthY = vpHeight / 2;
-
-  function applybg() {
-    modal.style.backgroundImage = "url(" + img_source + ")";
-    modal.style.backgroundSize = "cover";
-    modal.style.backgroundPosition = "center";
-  }
-
-  if (!html.contains(modal)) {
-    modal = document.createElement("div");
-    modal.setAttribute("id", "modal");
-    html.appendChild(modal);
-    modal.style.top = nudgeLengthY + "px";
-    modal.style.left = nudgeLengthX + "px";
-    setTimeout(function() {
-      modal.classList.add("modal2build");
-    }, 1);
-    setTimeout(function() {
-      modal.classList.add("modal2appear");
-      applybg();
-      image_grid.classList.toggle('darken');
-      html.classList.toggle('noScroll');
-    }, 50);
-  } else if (html.contains(modal)) {
-    modal.style.transform = "translate(-50%, -50%) scale(0)";
-    setTimeout(function() {
-      html.removeChild(modal);
-      image_grid.classList.toggle('darken');
-      html.classList.toggle('noScroll');
-    }, 200);
-  }
-}
+// And finally let's repeat the process for touch events
+// first our middle scroller...
+document.querySelector('.scroller').addEventListener('touchstart',function(){
+  active = true;
+  document.querySelector('.scroller').classList.add('scrolling');
+});
+document.body.addEventListener('touchend',function(){
+  active = false;
+  document.querySelector('.scroller').classList.remove('scrolling');
+});
+document.body.addEventListener('touchcancel',function(){
+  active = false;
+  document.querySelector('.scroller').classList.remove('scrolling');
+});
