@@ -35,7 +35,7 @@ p {
 header {
     grid-row: 1;
     position: relative;
-    padding: 5%;
+    padding: 2% 5%;
     text-align: center;
 }
 
