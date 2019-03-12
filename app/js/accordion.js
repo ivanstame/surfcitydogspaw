@@ -35,7 +35,7 @@
 switchAccordion = function(e) {
   console.log("triggered");
 	e.preventDefault();
-	var thisAnswer = e.target.parentNode.nextElementSibling;
+	var thisAnswer = e.target.parentNode.parentNode.parentNode.nextElementSibling;
 	var thisQuestion = e.target;
 	if(thisAnswer.classList.contains('is-collapsed')) {
 		setAccordionAria(thisQuestion, thisAnswer, 'true');
