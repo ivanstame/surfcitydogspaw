@@ -425,18 +425,18 @@ footer {
     grid-gap: 1rem;
     line-height: 1.5;
     font-size: 1.2rem;
+    font-family: var(--copy-font);
 }
 
 .f-contentwrap div p {
     color: white;
     font-weight: bold;
     text-transform: uppercase;
+    font-family: var(--copy-font);
 
 }
 
 .f-contentwrap div p span {
-    font: unset;
-    font-family: 'Dopis', Arial, sans-serif;
     font-weight: lighter;
     font-size: 0.9rem;
     grid-column: 2;
