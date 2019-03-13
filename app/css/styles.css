@@ -399,11 +399,55 @@ header nav ul li {
 
 footer {
     grid-row: 6;
-    background: #E8E8E8;
-    padding: 10% 5%;
+    background: #7494B1;
+    /* padding: 10%; */
+    /* display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+}
+
+.f-contentwrap {
+    padding: 10%;
+    grid-row: 1;
     display: flex;
     flex-flow: column;
-    justify-content: space-around;
-    align-items: center;
-    line-height: 1.5;
+    color: white;
+
 }
+
+.f-contentwrap div {
+    margin: 0.75rem 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1rem;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.f-contentwrap div p {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.f-contentwrap div p span {
+    font-weight: lighter;
+    grid-column: 2;
+    color: #E8E8E8;
+}
+
+#copyright {
+    grid-row: 2;
+    padding: 0 10%;
+    text-align: center;
+    border-top: 1px solid #F9FF00;
+    background-image: linear-gradient(to left, #e8e8e8, #e1e1e6, #d7dae4, #cdd4e2, #c0cfdf);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
