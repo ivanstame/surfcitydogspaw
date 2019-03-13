@@ -435,6 +435,7 @@ footer {
 }
 
 .f-contentwrap div p span {
+    font: unset;
     font-family: 'Dopis', Arial, sans-serif;
     font-weight: lighter;
     grid-column: 2;
