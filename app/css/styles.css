@@ -43,7 +43,7 @@ h1 {
     font-size: 2.5rem;
 }
 
-p, li {
+p, li, span {
     font-family: var(--copy-font);
 }
 
