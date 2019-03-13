@@ -438,6 +438,7 @@ footer {
     font: unset;
     font-family: 'Dopis', Arial, sans-serif;
     font-weight: lighter;
+    font-size: 0.9rem;
     grid-column: 2;
     color: #E8E8E8;
 }
