@@ -263,7 +263,7 @@ nav li {
     transition: background-color 0.5s ease-in-out;
     display: grid;
     grid-template-columns: 20% 75%;
-    grid-gap: 5%;
+    grid-gap: 10%;
     grid-template-rows: 100px;
     align-items: center;
     margin-bottom: 1rem;
