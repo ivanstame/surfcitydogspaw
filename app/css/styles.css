@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: 'Tapeside';
+  src:  url('../fonts/tapeside.woff') format('woff'), /* Pretty Modern Browsers */
+        url('../fonts/tapeside.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
   font-family: 'Dopis';
   src:  url('../fonts/Dopis-Regular.woff') format('woff'), /* Pretty Modern Browsers */
         url('../fonts/Dopis-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
@@ -27,7 +32,7 @@
 }
 
 :root {
-    --title-font: 'Trend', sans-serif;
+    --title-font: 'Tapeside', sans-serif;
     --copy-font: 'Dopis', Arial, sans-serif;
     --main-accent: #5E8EAF;
     --secondary-accent: #F3DA02;
@@ -45,6 +50,10 @@ h1 {
 
 p, li {
     font-family: var(--copy-font);
+}
+
+strong {
+    font-weight: bold;
 }
 
 /* Grid Setup */
@@ -71,12 +80,12 @@ header img {
     width: 75%;
 }
 
-header .nav-toggle {
+ .nav-toggle {
     display: none;
 }
 
 
-header .nav-toggle-label {
+.nav-toggle-label {
     position: absolute;
     top: 0;
     right: 0;
@@ -88,21 +97,21 @@ header .nav-toggle-label {
 
 }
 
-header .nav-toggle-label img {
+.nav-toggle-label img {
     transition: all 300ms ease-in-out;
     transform: rotate(45deg);
     width: 15%;
 }
 
-header .nav-toggle-label.shift img {
+.nav-toggle-label.shift img {
     transform: rotate(-45deg);
 }
 
-header .nav-toggle:checked ~ nav {
+.nav-toggle:checked ~ nav {
     transform: scaleY(1);
 }
 
-header nav {
+nav {
     position: absolute;
     top: 100%;
     left: 0;
@@ -115,18 +124,18 @@ header nav {
     transition: all 200ms ease-in-out;
 }
 
-header ul {
+nav ul {
     text-align: center;
     opacity: 0;
     transition: all 200ms ease-in-out 200ms;
 
 }
 
-header .nav-toggle:checked ~ nav ul {
+.nav-toggle:checked ~ nav ul {
     opacity: 1;
 }
 
-header nav ul li {
+nav li {
     text-transform: uppercase;
     margin: 3rem 0;
     cursor: pointer;
@@ -173,61 +182,110 @@ header nav ul li {
 
 .services {
     grid-row: 4;
-    background-image: url('../images/pawbgblue2.svg');
+    background-image: url(../images/pawbgblue2.svg);
     background-size: contain;
-    padding: 0% 5% 10% 5%;
+    padding: 0% 5% 0% 5%;
     display: flex;
     flex-flow: column;
     justify-content: space-around;
     align-items: center;
 }
-
-
-
+.services .container {
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+.accordion dl {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.accordion dt {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
 .accordion dd, .accordion__panel {
 	background: rgba(255, 255, 255, 0.5);
 	font-size: 1em;
 	line-height: 1.5em;
+    border-radius: 4px;
+    margin-bottom: 1rem;
 }
-.accordion p {
+.accordion dd > div {
 	padding: 1em 2em 1em 2em;
 }
+.accordion dd img{
+    width: 100%;
+
+    box-shadow: 1px 1px 3px 0px var(--main-accent);
+}
+.accordion dd button{
+    outline: none;
+    background: var(--main-accent);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    float: right;
+    margin: 1rem 0;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.accordion li {
+    margin: 5px 0 5px 15px;
+    position: relative;
+}
+.accordion li::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background: black;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    left: -5%;
+    top: 25%;
+}
 .accordion {
-	position: relative;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
-.services .container {
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 2em 0 2em 0;
-}
+
 .accordionTitle {
     position: relative;
-    text-align: right;
     color: yellow;
     text-decoration: none;
     font-family: var(--title-font);
     font-size: 2rem;
     transition: background-color 0.5s ease-in-out;
-    border-bottom: 1px solid black;
     display: grid;
     grid-template-columns: 20% 75%;
     grid-gap: 5%;
     grid-template-rows: 100px;
     align-items: center;
-    padding-bottom: 1rem;
     margin-bottom: 1rem;
-    width: 85vw;
+    width: 75vw;
 }
 
 .accordionTitle span {
     grid-column: 2;
+    position: relative;
     grid-row: 1;
 }
 .accordionTitle img {
     grid-column: 1;
     grid-row: 1;
-    width: 100%;
-	transition: transform 0.3s ease-in-out;
+    border: 3px solid white;
+    width: 60px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 6px;
+    background: rgba(225, 255, 255, 0.5);
+    transition: transform 0.4s ease-in-out;
+    box-shadow: 1px 0px 10px 3px rgba(0, 0, 0, 0.2);
 }
 .accordionTitle .js-accordionTrigger img.is-expanded{
 	transform: rotate(-225deg);
@@ -399,7 +457,8 @@ header nav ul li {
 
 footer {
     grid-row: 6;
-    background: #7494B1;
+    background-image: url('../images/pawbgblue2.svg');
+    background-size: contain;
     /* padding: 10%; */
     /* display: flex;
     flex-flow: column;
@@ -411,6 +470,7 @@ footer {
 
 .f-contentwrap {
     padding: 10%;
+    padding-bottom: 0;
     grid-row: 1;
     display: flex;
     flex-flow: column;
@@ -421,24 +481,19 @@ footer {
 .f-contentwrap div {
     margin: 0.75rem 0;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 1rem;
+    grid-template-columns: 1fr 2.5fr;
     line-height: 1.5;
-    font-size: 1.2rem;
-    font-family: var(--copy-font);
+    font-family: 'Dopis', Arial, sans-serif;
 }
 
 .f-contentwrap div p {
-    color: white;
+    color: #F9FF00;
     font-weight: bold;
-    text-transform: uppercase;
-    font-family: var(--copy-font);
 
 }
 
 .f-contentwrap div p span {
     font-weight: lighter;
-    font-size: 0.9rem;
     grid-column: 2;
     color: #E8E8E8;
 }
@@ -447,10 +502,42 @@ footer {
     grid-row: 2;
     padding: 0 10%;
     text-align: center;
-    border-top: 1px solid #F9FF00;
-    background: var(--body-color);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+@media only screen and (min-width: 30.1em) and (max-width: 61.99em) and (orientation : landscape) {
+    header {
+        text-align: left;
+    }
+    header img {
+        width: 25%;
+    }
+    nav {
+        position: unset;
+        display: inline;
+        transform: scaleY(1);
+        text-align: left;
+        transition: none;
+    }
+    nav ul {
+        text-align: left;
+        opacity: 1;
+        transition: none;
+    }
+    nav li {
+        cursor: pointer;
+        font-variant: small-caps;
+        font-weight: bold;
+        font-size: 1rem;
+        display: inline-block;
+        margin: unset;
+        text-transform: none;
+        margin-right: 1.5rem;
+    }
+    .nav-toggle-label {
+        display: none;
+    }
+}
