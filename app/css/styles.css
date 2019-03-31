@@ -183,7 +183,7 @@ nav li {
 .services {
     grid-row: 4;
     background-image: url(../images/pawbgblue2.svg);
-    background-size: contain;
+    background-size: calc(100% + 1px);
     padding: 0% 5% 0% 5%;
     display: flex;
     flex-flow: column;
